@@ -32,3 +32,7 @@ The application itself is stateless and does not save any kind of data, it only 
 
 - No data may be lost
 - Every data object must be processed in no more than 0.5 seconds (including receiving incoming data, transforming it and forwarding it to another endpoint)
+
+## Overview
+
+![A graphical context overview](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/torbendury/aracotaebwsc/main/data_processing/_docs/systemcontext.puml)

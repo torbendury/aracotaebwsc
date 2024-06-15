@@ -1,0 +1,24 @@
+@startuml Context
+title Context Overview
+
+header Only for research purposes. Do not use in production.
+footer Architectural Requirements and Code Optimizations to Achieve Environmental Benefits With Serverless Computing
+
+node SourceSystem as ss
+node TargetSystem as ts
+
+package "data_processing" {
+    component Server as s
+    component Queue as q
+    component XmlJson as xj
+    component Worker as w
+}
+
+ss -> s
+
+s --> q
+q --> w
+xj -> w
+
+w -> ts
+@enduml
