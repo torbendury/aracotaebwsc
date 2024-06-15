@@ -7,9 +7,9 @@ var ErrEmptyShortName = errors.New("empty product shortname")
 var ErrZeroEAN = errors.New("zero EAN")
 
 type Product struct {
-	EAN        int
-	ShortName  string
-	PriceCents int
+	EAN        int    `xml:"EAN" json:"EAN"`
+	ShortName  string `xml:"ShortName" json:"shortName"`
+	PriceCents int    `xml:"PriceCents" json:"priceCents"`
 }
 
 type Stock int
