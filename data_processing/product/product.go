@@ -14,7 +14,7 @@ type Product struct {
 
 type Stock int
 
-func NewProduct(ean int, shortname string, pricecents int) (*Product, error) {
+func New(ean int, shortname string, pricecents int) (*Product, error) {
 	if ean < 0 {
 		return nil, ErrNegativeEAN
 	}

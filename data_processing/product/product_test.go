@@ -17,7 +17,7 @@ func TestNewProductError(t *testing.T) {
 
 	for _, tt := range productTests {
 		t.Run(tt.name, func(t *testing.T) {
-			_, got := NewProduct(tt.ean, tt.shortname, tt.pricecents)
+			_, got := New(tt.ean, tt.shortname, tt.pricecents)
 			if got != tt.want {
 				t.Errorf("got %v want %v", got, tt.want)
 			}
