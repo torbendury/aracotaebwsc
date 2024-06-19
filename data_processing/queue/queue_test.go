@@ -84,3 +84,10 @@ func TestOrder(t *testing.T) {
 		MustEqual(e, want[i], t)
 	}
 }
+
+func TestFifoQueueImplementsQueue(t *testing.T) {
+	fq, _ := New(1)
+	_, ok := interface{}(fq).(Queue)
+
+	MustEqual(true, ok, t)
+}

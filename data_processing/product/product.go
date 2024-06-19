@@ -1,3 +1,5 @@
+// Product contains the business entity of a product, specifying a contract
+// which source as well as target systems must fulfil.
 package product
 
 import "errors"

@@ -3,7 +3,7 @@ package queue
 import "errors"
 
 type Queue interface {
-	New(int) (*Queue, error)
+	//New(int) (*Queue, error)
 	Push(interface{})
 	Pop() interface{}
 	Size() int
@@ -15,7 +15,7 @@ type FifoQueue struct {
 	queue chan interface{}
 }
 
-func New(size int) (*FifoQueue, error) {
+func New(size int) (Queue, error) {
 	if size <= 0 {
 		return nil, ErrNonPositiveQueueSize
 	}
